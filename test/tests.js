@@ -20,33 +20,33 @@ module('Low level', lifecycle);
 test('Simple call', function () {
     var url = 'data/name.html';
 
-    var feyenoord = $.feyenoord(url, this.options);
+    var psv = $.psv(url, this.options);
     var expected = $.ajax(url, this.options);
 
-    propEqual(feyenoord, expected);
+    propEqual(psv, expected);
 });
 
 test('Setup', function () {
-    $.feyenoordSetup({
+    $.psvSetup({
         cache: false,
         url: 'data/setup.json',
         text: 'json'
     });
 
-    var feyenoord = $.feyenoord();
+    var psv = $.psv();
     var ajax = $.ajax();
 
-    strictEqual(feyenoord.responseJSON, ajax.responseJSON);
+    strictEqual(psv.responseJSON, ajax.responseJSON);
 });
 
 test('Pre-filter', function () {
-    $.feyenoordPrefilter(function (options) {
+    $.psvPrefilter(function (options) {
         options.text = 'json';
         options.url = 'data/setup.json';
     });    
 
-    var feyenoord = $.feyenoord(this.options);
+    var psv = $.psv(this.options);
     var ajax = $.ajax(this.options);
     
-    strictEqual(feyenoord.responseJSON, ajax.responseJSON);
+    strictEqual(psv.responseJSON, ajax.responseJSON);
 });

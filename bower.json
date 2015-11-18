@@ -1,8 +1,8 @@
 {
-  "name": "jquery-feyenoord",
+  "name": "jquery-psv",
   "version": "0.1",
   "main": [
-    "src/jquery-feyenoord.js"
+    "src/jquery-psv.js"
   ],
   "dependencies": {
     "jquery": ">=1.5"
@@ -23,11 +23,11 @@
   "keywords": [
     "jquery",
     "javascript",
-    "feyenoord",
+    "psv",
     "ajax",
     "football"
   ],
-  "description": "Asynchronous requests for Feyenoord supporters.",
+  "description": "Asynchronous requests for PSV supporters.",
   "authors": [
     "Robert van Kempen"
   ]
